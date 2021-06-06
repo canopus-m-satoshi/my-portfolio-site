@@ -4,7 +4,8 @@ h1 {
     display: flex;
     align-items: center;
     position: relative;
-    &::before,&::after {
+    &::before,
+    &::after {
       content: '';
       display: block;
       width: 30px;
@@ -18,4 +19,8 @@ h1 {
       transform: rotate(-45deg);
     }
   }
+}
+
+.div {
+  display: flex;
 }
