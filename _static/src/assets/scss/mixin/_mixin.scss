@@ -1,0 +1,192 @@
+@use '../setting/setting' as s;
+
+// メディアクエリ
+@mixin pc {
+  @media only screen and (min-width: #{s.$bp-pc}) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media only screen and (max-width: #{s.$bp-sp}) {
+    @content;
+  }
+}
+
+/* RWD表示切り替え
+---------------------------------------------------------------------------- */
+@media all and (min-width: #{s.$breakpoint+1}px) {
+  .nopc {
+    display: none !important;
+  }
+}
+@media all and (max-width: #{s.$breakpoint}px) {
+  .nosp {
+    display: none !important;
+  }
+}
+
+@mixin background(
+  $color: transparent,
+  $image,
+  // 呼び出し側：ulr(../img/)など
+  $repeat: no-repeat,
+  $position-x: center,
+  $position-y: center,
+  $size: cover
+) {
+  background: {
+    color: $color;
+    image: $image;
+    repeat: $repeat;
+    position: $position-x $position-y;
+    size: $size;
+  }
+}
+
+@mixin fz($font-size, $line-height: 0, $letter-spacing: 0, $font-weight: 0) {
+  //  font-size
+  font-size: ($font-size / 10) + rem;
+  //  line-height
+  @if ($line-height!=0) {
+    line-height: ($line-height / $font-size);
+  }
+  // letter-spacing
+  @if ($letter-spacing!=0) {
+    letter-spacing: ($letter-spacing / 1000) * 1em;
+  }
+  // font-weight
+  @if ($font-weight!=0) {
+    font-weight: ($font-weight);
+  }
+}
+
+// font-size(vw)
+@mixin spfz($fontSizeSp) {
+  font-size: ($fontSizeSp / 750 * 100) + vw;
+}
+// convert from px to vw
+@function vw($pixel) {
+  $vw-value: $pixel/750 * 100;
+  @return #{$vw-value}vw;
+}
+
+// Noto Sans JP
+@mixin noto($weight) {
+  font-family: "Noto Sans JP";
+  font-weight: #{$weight};
+}
+
+// flex
+@mixin flex($justify: 0, $align: 0, $wrap: 0, $wrap_align: 0) {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  // justify-content水平方向揃え（第一引数）
+  @if $justify == start {
+    // 左揃え
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  } @else if $justify == end {
+    // 右揃え
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  } @else if $justify == center {
+    // 中央揃え
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  } @else if $justify == between {
+    // 両端配置
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  } @else if $justify == around {
+    // 均等配置
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  // align-items垂直方向揃え（第二引数）
+  @if $align == start {
+    // 上揃え
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  } @else if $align == end {
+    // 下揃え
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  } @else if $align == center {
+    // 中央揃え
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  } @else if $align == baseline {
+    // ベースライン
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  } @else if $align == stretch {
+    // 高さ揃え
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  // flex-wrap子要素の折り返し設定（第三引数）
+  @if $wrap == nowrap {
+    // 折り返ししない
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  } @else if $wrap == wrap {
+    // 上から下
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  } @else if $wrap == reverse {
+    // 下から上
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  // align-content複数行設定（第四引数）
+  @if $wrap_align == start {
+    // 上揃え
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  } @else if $wrap_align == end {
+    // 下揃え
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+  } @else if $wrap_align == center {
+    // 中央揃え
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  } @else if $wrap_align == between {
+    // 両端配置
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+  } @else if $wrap_align == around {
+    // 均等配置
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+  } @else if $wrap_align == stretch {
+    // 高さ揃え
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+  }
+}

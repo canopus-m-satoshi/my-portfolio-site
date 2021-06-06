@@ -1,0 +1,212 @@
+@use '../../mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+.home {
+  .box {
+    width: 300px;
+    height: 300px;
+  }
+
+  .box01 {
+    background-color: $color_main; //settingの変数を使用
+  }
+
+  .box02 {
+    margin: 40px 0 40px 20px;
+    @include background($image:url(https://picsum.photos/200/300),$size:contain); //mixinを使用
+
+    @include sp() {
+      @include background($image:url(https://picsum.photos/200/300?grayscale)); //mixinを使用 $sizeを省略するとcoverになる
+    }
+  }
+}
+
+.p-test {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: #{$breakpoint}px) {
+  .p-test {
+    width: 100%;
+  }
+}
+
+.p-test-txt-sub {
+  @include fz(30, 30, 80, 700);
+  color: red;
+  &:hover {
+    transition: all 0.3s;
+    transform: translateY(50%);
+    color: blue;
+  }
+}
+
+.p-test-img {
+  img {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: #{$breakpoint}px) {
+  .p-test-img {
+    display: none;
+  }
+}
+
+//【p-mv-wrap】start ---------------------------------------------------------
+.p-mv-wrap {
+  margin-top: 100px;
+  position: relative;
+}
+
+.p-mv-img {
+  img {
+    width: 100%;
+  }
+}
+
+.p-mv-txt-box {
+  color: $base_bg_color;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+
+  &::before {
+    content: "";
+    background-image: url(../images/top/img_mv_logo.png);
+    background-repeat: no-repeat;
+    width: 460px;
+    height: 380px;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+  }
+}
+
+.p-mv-ttl {
+  @include fz(60, 60, 100, 700);
+}
+
+.p-mv-ttl-en {
+  @include fz(20, 20, 100, 700);
+  font-family: "Roboto";
+  margin: 25px 0 55px;
+}
+
+.p-mv-txt {
+  @include fz(16, 32, 100, 500);
+}
+
+@media screen and (max-width: #{$breakpoint}px) {
+  .p-mv-wrap {
+    height: vw(700);
+    margin-top: vw(122);
+  }
+
+  .p-mv-txt-box {
+    width: vw(710);
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &::before {
+      background-size: cover;
+      width: 60%;
+      height: 60%;
+      top: 25%;
+      left: 5%;
+    }
+  }
+
+  .p-mv-ttl {
+    @include spfz(70);
+    line-height: 1.4;
+  }
+
+  .p-mv-ttl-en {
+    @include spfz(30);
+    margin: vw(40) 0 vw(70);
+  }
+
+  .p-mv-txt {
+    @include spfz(32);
+  }
+}
+
+// ---------------------------------------------------------【p-mv-wrap】end
+
+//【p-banner-wrap】start ---------------------------------------------------------
+
+.p-banner-wrap {
+  padding: 50px 0;
+}
+
+.p-banner {
+  width: 800px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: #{$breakpoint}px) {
+  .p-banner-wrap {
+    padding: 5vw 0;
+  }
+
+  .p-banner {
+    width: 90%;
+  }
+}
+
+// ---------------------------------------------------------【p-banner-wrap】end
+
+#text-button {
+  display: block;
+  cursor: pointer;
+  width: 160px;
+  text-align: center;
+  border: 1px solid #232323;
+}
+
+.delete {
+  display: none;
+}
+
+
+
+
+@media screen and (max-width: #{$breakpoint}px){
+  
+  /* * {
+    border: 1px solid gray;
+  } */
+  .image {
+    text-align: center;
+  
+    img{
+      vertical-align:middle;
+  }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .title {
+    align-self: end;
+  }
+  .title,
+  p {
+    margin: 0;
+  }
+  .image {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+}

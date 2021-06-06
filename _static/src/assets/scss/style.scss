@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// 色などの変数読み込み
+@use "setting/setting";
+
+// レイアウト
+@use "./layout";
+
+// 変数・ミックスイン
+@use "mixin/mixin";
+
+// module
+//
+// 汎用モジュール
+//
+@use './modules';
+
+// page
+@use './page';
