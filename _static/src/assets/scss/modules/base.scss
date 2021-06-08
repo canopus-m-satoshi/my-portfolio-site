@@ -31,42 +31,6 @@
   font-weight: 700;
   font-style: normal;
 }
-/* 
-@font-face {
-    font-family: 'Noto Sans JP';
-	src: url("../../assets/fonts/Noto_Sans_JP/NotoSansJP-Black.woff2") format("woff2"),url("../../assets/fonts/Noto_Sans_JP/NotoSansJP-Black.woff") format("woff");
-	font-display: swap;
-    font-weight: 900;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Serif JP';
-	src: url("../../assets/fonts/Noto_Serif_JP/NotoSerifJP-Regular.woff2") format("woff2"),url("../../assets/fonts/Noto_Serif_JP/NotoSerifJP-Regular.woff") format("woff");
-	font-display: swap;
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Serif JP';
-	src: url("../../assets/fonts/Noto_Serif_JP/NotoSerifJP-Medium.woff2") format("woff2"),url("../../assets/fonts/Noto_Serif_JP/NotoSerifJP-Medium.woff") format("woff");
-	font-display: swap;
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Serif JP';
-	src: url("../../assets/fonts/Noto_Serif_JP/NotoSerifJP-Bold.woff2") format("woff2"),url("../../assets/fonts/Noto_Serif_JP/NotoSerifJP-Bold.woff") format("woff");
-	font-display: swap;
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Noto Serif JP';
-	src: url("../../assets/fonts/Noto_Serif_JP/NotoSerifJP-Black.woff2") format("woff2"),url("../../assets/fonts/Noto_Serif_JP/NotoSerifJP-Black.woff") format("woff");
-	font-display: swap;
-    font-weight: 900;
-    font-style: normal;
-}*/
 /* base
 ---------------------------------------------------------------------------- */
 /*------------- General Elements -------------*/
@@ -77,8 +41,8 @@ html {
 body {
   font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
     'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-  color: $base_color;
-  @include fz(15, 15, 0, 400);
+  color: $color_text_main;
+  @include fz(15, 1, 0, 400);
   min-width: 1200px;
   position: relative;
 }
@@ -101,8 +65,7 @@ img {
 * {
   word-break: break-all;
 }
-
-@media screen and (max-width: #{$breakpoint}) {
+@media screen and (max-width: #{$breakpoint}px) {
   body {
     min-width: inherit;
   }
@@ -112,16 +75,4 @@ img {
 .l-pagebody {
   width: 100%;
   overflow: hidden;
-}
-
-/*------------- .l-content -------------*/
-.l-content {
-}
-
-/*------------- .l-sidebar -------------*/
-.l-sidebar {
-}
-
-/*------------- .l-pagetop -------------*/
-.l-pagetop {
 }
