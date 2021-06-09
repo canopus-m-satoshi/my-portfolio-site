@@ -21,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!--  ページ固有のCSSファイル開始-->
     <link
@@ -67,13 +68,19 @@
 
     <section class="about-wrap" id="about">
       <div class="content">
-        <h2 class="section-ttl en-ttl">About</h2>
+        <h2
+          class="section-ttl en-ttl"
+          data-aos="fade-right"
+          data-aos-offset="300"
+        >
+          About
+        </h2>
 
-        <div class="about-img">
+        <div class="about-img" data-aos="fade-right" data-aos-offset="300">
           <img src="/assets/images/top/test01.png" alt=" " />
         </div>
 
-        <div class="about-box">
+        <div class="about-box" data-aos-offset="500">
           <div class="about-box-left">
             <h3 class="about-box-ttl en-ttl">Introduction</h3>
             <p class="about-txt">
@@ -114,15 +121,21 @@
 
     <section class="work-wrap" id="works">
       <div class="content">
-        <h2 class="section-ttl en-ttl">Works</h2>
-        <p class="section-lead">
+        <h2
+          class="section-ttl en-ttl"
+          data-aos="fade-right"
+          data-aos-offset="300"
+        >
+          Works
+        </h2>
+        <p class="section-lead" data-aos="fade-right">
           制作したサイト/アプリケーションです。<br />
           ※サイト制作の実績については管理者にアイパスを支給してもらう必要があります。恐れ入りますが、Contactよりご連絡ください
         </p>
       </div>
 
       <ul class="work-list">
-        <li class="work-list-item">
+        <li class="work-list-item" data-aos="fade-up" data-aos-offset="600">
           <a
             href="https://satoshi-matsushima.github.io/monsters-rolodex/"
             class="work-link is-imghover animoBorderLeftRight"
@@ -142,7 +155,7 @@
             </div>
           </a>
         </li>
-        <li class="work-list-item">
+        <li class="work-list-item" data-aos="fade-up" data-aos-offset="500">
           <a
             href="/"
             class="work-link is-imghover animoBorderLeftRight"
@@ -180,56 +193,62 @@
 
     <section class="contact-wrap" id="contact">
       <div class="content">
-        <h2 class="section-ttl en-ttl">Contact</h2>
+        <h2 class="section-ttl en-ttl" data-aos="fade-right">Contact</h2>
 
-        <div class="contact-box">
-          <h3 class="contact-box-ttl en-ttl">Email</h3>
-          <p class="contact-box-mail">
-            <a
-              class="contact-box-mail-link"
-              href="mailto:m&#97;i&#108;t&#111;:c&#99;&#110;&#116;&#115;&#97;to&#64;&#103;m&#97;&#105;&#108;&#46;&#99;o&#109;"
-            >
-              c&#99;&#110;&#116;&#115;&#97;to&#64;&#103;m&#97;&#105;&#108;&#46;&#99;o&#109;
-            </a>
-          </p>
-        </div>
+        <div class="contact-box-wrap" data-aos="fade-up" data-aos-offset="500">
+          <div class="contact-box">
+            <h3 class="contact-box-ttl en-ttl">Email</h3>
+            <p class="contact-box-mail">
+              <a
+                class="contact-box-mail-link"
+                href="mailto:m&#97;i&#108;t&#111;:c&#99;&#110;&#116;&#115;&#97;to&#64;&#103;m&#97;&#105;&#108;&#46;&#99;o&#109;"
+              >
+                c&#99;&#110;&#116;&#115;&#97;to&#64;&#103;m&#97;&#105;&#108;&#46;&#99;o&#109;
+              </a>
+            </p>
+          </div>
 
-        <div class="contact-box">
-          <h3 class="contact-box-ttl en-ttl">Other Information</h3>
-          <ul class="sns-list">
-            <li class="sns-list-item">
-              <a
-                href="https://www.linkedin.com/in/%E6%99%BA%E5%8F%B2-%E6%9D%BE%E5%B3%B6-950235213/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-3x fa-linkedin"></i>
-              </a>
-            </li>
-            <li class="sns-list-item">
-              <a
-                href="https://github.com/satoshi-matsushima"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-3x fa-github"></i>
-              </a>
-            </li>
-            <li class="sns-list-item coming-soon">
-              <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-3x fa-twitter"></i>
-              </a>
-            </li>
-            <li class="sns-list-item coming-soon">
-              <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-3x fa-facebook"></i>
-              </a>
-            </li>
-          </ul>
-          <!-- sns-list -->
+          <div class="contact-box">
+            <h3 class="contact-box-ttl en-ttl">Other Information</h3>
+            <ul class="sns-list">
+              <li class="sns-list-item">
+                <a
+                  href="https://www.linkedin.com/in/%E6%99%BA%E5%8F%B2-%E6%9D%BE%E5%B3%B6-950235213/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-3x fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="sns-list-item">
+                <a
+                  href="https://github.com/satoshi-matsushima"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-3x fa-github"></i>
+                </a>
+              </li>
+              <li class="sns-list-item coming-soon">
+                <a href="" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-3x fa-twitter"></i>
+                </a>
+              </li>
+              <li class="sns-list-item coming-soon">
+                <a href="" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-3x fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- sns-list -->
+          </div>
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <p>Copyright &copy; 2021 Satoshi Matsushima, All Rights Reserved.</p>
+    </footer>
 
     <!-- ページ共通のJSファイル 開始 -->
     <!-- <script src="/assets/js/lib/jquery-1.12.4.js"></script> -->
@@ -243,6 +262,7 @@
 
     <!--  ページ固有のJSファイル開始-->
     <script src="https://unpkg.com/ityped@1.0.3"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/top/top.js"></script>
     <!--  ページ固有のJSファイル終了-->
   </body>

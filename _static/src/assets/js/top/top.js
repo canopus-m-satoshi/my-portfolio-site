@@ -1,3 +1,5 @@
+// Type Writer
+
 const iTyped = document.querySelector('.ityped');
 
 window.ityped.init(iTyped, {
@@ -17,4 +19,13 @@ window.ityped.init(iTyped, {
   showCursor: true,
   cursorChar: '|',
   onFinished: function () {},
+});
+
+// Fade in Animation
+AOS.init({
+  offset: 500,
+  delay: 100,
+  duration: 500,
+  easing: 'ease-in',
+  once: true,
 });
