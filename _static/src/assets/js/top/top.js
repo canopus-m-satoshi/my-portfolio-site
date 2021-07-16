@@ -1,19 +1,41 @@
 // Type Writer
 
-const iTyped = document.querySelector('.ityped');
+const iTypedTitle = document.querySelector('.ityped-ttl');
 
-window.ityped.init(iTyped, {
+window.ityped.init(iTypedTitle, {
+  strings: ['Welcome to My Site'],
+  typeSpeed: 55,
+  startDelay: 200,
+  loop: false,
+  showCursor: false,
+  onFinished: function () {},
+});
+
+const iTypedTextNoLoop = document.querySelector('.ityped-txt-noloop');
+
+window.ityped.init(iTypedTextNoLoop, {
+  strings: ['I am'],
+  typeSpeed: 55,
+  startDelay: 1300,
+  showCursor: false,
+  loop: false,
+  onFinished: function () {},
+});
+const iTypedTextLoop = document.querySelector('.ityped-txt-loop');
+
+window.ityped.init(iTypedTextLoop, {
   strings: [
-    'Front-end Developer',
+    'Satoshi Matsushima',
+    'A Front-end Developer',
     'Openness',
     'Enthusiastic',
-    'Movie Lover',
     'Workaholics',
     'Respectful',
   ],
+
   typeSpeed: 55,
   backSpeed: 30,
-  startDelay: 700,
+  startDelay: 1500,
   backDelay: 500,
   loop: true,
   showCursor: true,
