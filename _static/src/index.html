@@ -26,14 +26,6 @@
       type="image/x-icon"
       href="./assets/images/favicon.ico"
     />
-    <!--  ページ固有のCSSファイル開始-->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/assets/css/top/top.css?v=1"
-      media="all"
-    />
-    <!--  ページ固有のCSSファイル終了-->
   </head>
   <body id="body">
     <header>
@@ -42,8 +34,8 @@
         <div id="g-nav-list">
           <!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
           <ul>
-            <li><a href="#top">Top</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="/">Top</a></li>
+            <li><a href="/#about">About</a></li>
             <li><a href="#works">Works</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -51,6 +43,10 @@
       </nav>
       <div class="circle-bg"></div>
     </header>
+
+    <!--#include file="/include/test.html" -->
+    <!--#include file="/src/include/test.php" -->
+    <!--#include file="./include/test.php" -->
 
     <section class="intro-wrap" id="top">
       <div class="intro-box">
@@ -113,10 +109,38 @@
 
     <section class="work-wrap" id="works">
       <div class="content js-scroll slide-left">
-        <h2 class="section-ttl en-ttl">Works</h2>
-        <p class="section-lead">制作したサイト/アプリケーションです。</p>
+        <h2 class="section-ttl en-ttl">
+          Works - <span class="sm">Webサイト</span>
+        </h2>
+        <p class="section-lead">
+          正社員時代に制作したWebサイトです。コーポレートサイトを中心に様々なサイトを制作しました。
+        </p>
       </div>
 
+      <ul class="work-cards">
+        <li class="work-cards-item">
+          <a href="/work/work01.html" class="work-cards-item-link">
+            <img
+              class="work-cards-img"
+              src="https://placehold.jp/300x300.png"
+              alt="フルーツ寄せ集め"
+            />
+            <div class="mask">
+              <p class="work-cards-txt">
+                View <br class="nopc" />
+                Detail
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <div class="content js-scroll slide-left">
+        <h2 class="section-ttl en-ttl">
+          Works - <span class="sm">Web開発</span>
+        </h2>
+        <p class="section-lead">現在学習中のReactを使用した制作物です。</p>
+      </div>
       <ul class="work-list">
         <li class="work-list-item">
           <a
@@ -168,7 +192,7 @@
           企業で制作したWebサイト制作実績については下記リンクよりアクセスしてください。<br />
           各制作物紹介ページにはBasic認証をかけているため、本サイトもしくはリンク先ページの【CONTACT】よりアイパス申請をしてください。
         </p>
-        <p class="work-other-link-btn">
+        <p class="primary-btn">
           <a
             href="https://www.resume.id/my_site/works"
             target="_blank"
@@ -235,7 +259,10 @@
     </section>
 
     <footer class="footer">
-      <p>Copyright &copy; 2021 Satoshi Matsushima, All Rights Reserved.</p>
+      <p>
+        Copyright &copy; 2021 Satoshi Matsushima, <br class="nopc" />All Rights
+        Reserved.
+      </p>
     </footer>
 
     <!-- ページ共通のJSファイル 開始 -->

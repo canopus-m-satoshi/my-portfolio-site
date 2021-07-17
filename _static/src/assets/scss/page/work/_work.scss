@@ -1,0 +1,122 @@
+@use '../../mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+//【body】start ---------------------------------------------------------
+body {
+  &.is-fix {
+    position: fixed;
+  }
+}
+// ---------------------------------------------------------【body】end
+
+//【work-wrap】start ---------------------------------------------------------
+
+.work-wrap {
+  margin-top: 80px;
+}
+
+.work-ttl {
+  @include fz(60, 1.2, 80, 700);
+}
+
+.work-img {
+  width: 800px;
+  height: auto;
+  margin: 50px auto 0;
+  cursor: pointer;
+}
+
+.modal-content {
+  width: 800px;
+  height: 95%;
+  margin: 50px auto 0;
+  z-index: 9999;
+  position: fixed;
+  top: -2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  overflow-y: scroll;
+}
+
+.site-url {
+  a {
+    @include fz(30, 1.2, 80, 700);
+    display: inline-block;
+    margin-top: 50px;
+    color: $color_text_main;
+
+    span {
+      display: inline-block;
+      width: 17px;
+    }
+  }
+}
+
+.modal-bg {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.close-btn {
+  width: 80px;
+  margin: 15px 10px 15px auto;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  color: $color_text_sub;
+  background-color: $color_accent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: #{$breakpoint}px) {
+  .work-wrap {
+    margin-top: 7vw;
+  }
+
+  .work-ttl {
+    font-size: $spfz-xl;
+  }
+
+  .work-img {
+    width: 90%;
+    margin: 10vw auto 0;
+  }
+
+  .work-desc {
+    &.skills {
+      padding-left: 4em;
+      text-indent: -4em;
+    }
+  }
+
+  .modal-content {
+    width: 90%;
+    height: 95%;
+    margin: 10vw auto 0;
+  }
+
+  .site-url {
+    a {
+      font-size: $spfz-lg;
+      margin-top: 8vw;
+
+      span {
+        width: 4vw;
+      }
+    }
+  }
+
+  .close-btn {
+    width: 20vw;
+    margin: 2.5vw 0vw 2.5vw auto;
+    padding: 3vw;
+  }
+}
+// ---------------------------------------------------------【work-wrap】end
