@@ -21,6 +21,7 @@ window.ityped.init(iTypedTextNoLoop, {
   loop: false,
   onFinished: function () {},
 });
+
 const iTypedTextLoop = document.querySelector('.ityped-txt-loop');
 
 window.ityped.init(iTypedTextLoop, {

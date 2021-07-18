@@ -7,6 +7,23 @@
   font-family: 'Roboto', sans-serif;
 }
 
+//【error-page-img page】start ---------------------------------------------------------
+
+.error-page-img {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: #{$breakpoint}px) {
+  .error-page-img {
+    margin-top: 8vw;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+// ---------------------------------------------------------【error-page-img page】end
+
 //【ボタン】start ---------------------------------------------------------
 
 .primary-btn {
