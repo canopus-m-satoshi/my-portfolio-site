@@ -1,2 +1,0 @@
-"use strict";var tb_view="",agent=window.navigator.userAgent.toLowerCase(),ipad=-1<agent.indexOf("ipad")||-1<agent.indexOf("macintosh")&&"ontouchend"in document;(0<navigator.userAgent.indexOf("iPad")||0<navigator.userAgent.indexOf("Android")&&-1==navigator.userAgent.indexOf("Mobile")||0<navigator.userAgent.indexOf("A1_07")||0<navigator.userAgent.indexOf("SC-01C")||ipad)&&document.querySelector('meta[name="viewport"]').setAttribute("content",tb_view);
-//# sourceMappingURL=../../maps/common/viewport.js.map

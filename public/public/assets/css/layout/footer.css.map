@@ -1,1 +1,0 @@
-{"version":3,"sources":["layout/footer.scss","layout/footer.css"],"names":[],"mappings":"AAEA;EACE,eAAA;EACA,kBAAA;ACDF","file":"layout/footer.css","sourcesContent":["@use '../setting/setting' as s;\n\n.footer {\n  padding: 20px 0;\n  text-align: center;\n}\n",".footer {\n  padding: 20px 0;\n  text-align: center;\n}"]}
